@@ -25,20 +25,12 @@ define('JS_LOAD_IN_FOOTER', true); // load scripts in footer?
 define('VITE_SERVER', 'http://localhost:3000');
 define('VITE_ENTRY_POINT', '/main.js');
 
-// enqueue hook
-add_action( 'wp_enqueue_scripts', function() {
-    
-    if (defined('IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true) {
+function vite_head_module_hook() {
+    echo '<script type="module" crossorigin src="' . VITE_SERVER . VITE_ENTRY_POINT . '"></script>';
+}
 
-        // insert hmr into head for live reload
-        function vite_head_module_hook() {
-            echo '<script type="module" crossorigin src="' . VITE_SERVER . VITE_ENTRY_POINT . '"></script>';
-        }
-        add_action('wp_head', 'vite_head_module_hook');        
-
-    } else {
-
-        // production version, 'npm run build' must be executed in order to generate assets
+function manifest_files() {
+    // production version, 'npm run build' must be executed in order to generate assets
         // ----------
 
         // read manifest.json to figure out what to enqueue
@@ -65,8 +57,32 @@ add_action( 'wp_enqueue_scripts', function() {
             }
 
         }
+}
+
+// enqueue hook
+add_action( 'wp_enqueue_scripts', function() {
+    
+    if (defined('IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true) {
+
+        // insert hmr into head for live reload
+        
+        add_action('wp_head', 'vite_head_module_hook');
+
+    } else {
+
+        manifest_files();
 
     }
 
 
 });
+
+function my_theme_editor_enqueue()
+{
+    if (defined('IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true) {
+        vite_head_module_hook();
+    } else {
+        manifest_files();
+    }
+}
+add_action('enqueue_block_editor_assets', 'my_theme_editor_enqueue');
