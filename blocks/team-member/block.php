@@ -4,8 +4,6 @@ $data = array(
 	'avatar' => get_field( 'avatar' ),
 	'position' => get_field('position'),
 	'bio' => get_field( 'bio' ),
-	'twitter_handle' => get_field( 'twitter_handle' ),
-	'linkedin' => get_field( 'linkedin' ),
 );
 
 

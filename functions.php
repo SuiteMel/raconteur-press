@@ -12,4 +12,5 @@ define('IS_VITE_DEVELOPMENT', true);
 
 
 include "inc/inc.vite.php";
+include "inc/cpts/main.php";
 include "blocks/register-blocks.php";

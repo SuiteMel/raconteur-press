@@ -1,3 +1,42 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+body {
+  background-color: theme('colors.brand.white');
+  color: theme('colors.brand.black');
+}
+
+@font-face {
+  font-family: 'Fox Veteran';
+  src: url('./wp-content/themes/raconteur-press/assets/fonts/FoxVeteranRegular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./wp-content/themes/raconteur-press/assets/fonts/Inter-VariableFont.woff2') format('woff2 supports variations'), url('./wp-content/themes/raconteur-press/assets/fonts/Inter-VariableFont.woff2') format('woff2-variations');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.wysiwyg {
+  a:not([class*="btn"]) {
+    color: theme('colors.brand.dark-orange');
+    text-decoration: underline;
+  
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+}
+
+.btn-text {
+  font-size: theme('fontSize.sm');
+  font-family: theme('fontFamily.serif');
+  display: inline-block;
+  line-height: theme('lineHeight.tight');
+}

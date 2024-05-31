@@ -1,0 +1,4 @@
+- Add hygen templates for blocks
+- Research block creation and what various settings mean
+- CPT management
+- Header and footer files

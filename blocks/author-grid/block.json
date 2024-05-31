@@ -1,0 +1,18 @@
+{
+  "name": "author-grid",
+  "title": "Author Grid",
+  "description": "Display authors in a grid",
+  "category": "theme",
+  "apiVersion": 2,
+  "keywords": [
+    "author",
+    "grid"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "blocks/author-grid/block.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
