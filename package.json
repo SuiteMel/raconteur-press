@@ -10,8 +10,9 @@
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "cross-env": "^7.0.3",
-    "postcss": "^8.4.32",
+    "postcss": "^8.4.38",
     "postcss-nested": "^6.0.1",
+    "postcss-urlrebase": "^1.3.0",
     "tailwindcss": "^3.3.5",
     "vite": "^5.0.4",
     "vite-plugin-live-reload": "^3.0.3"

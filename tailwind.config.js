@@ -20,9 +20,9 @@ export default {
       base: '1rem',
       lg: '1.25rem', // 20px
       //xl: 24px/32px
-      '2xl': '2.5rem' // 40px **
+      '2xl': '2.5rem', // 40px **
       // 48px
-      // 64px
+      '3xl': '4rem' // 64px
       // 96px
     },
     container: {

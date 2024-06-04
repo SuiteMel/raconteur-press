@@ -1,0 +1,15 @@
+/* Main css */
+
+.footer-main {
+  min-height: 5rem;
+  background-image: url('./img/paperbg.jpg');
+
+  .wp-block-navigation__container {
+    gap: theme('space.4');
+  }
+
+  .wp-block-navigation-item__content {
+    font-family: theme('fontFamily.serif');
+    line-height: theme('lineHeight.tight');
+  }
+}
