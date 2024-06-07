@@ -15,6 +15,7 @@ function tt3child_register_acf_blocks() {
    */
   register_block_type( __DIR__ . '/team-member' );
   register_block_type( __DIR__ . '/author-grid' );
+  register_block_type( __DIR__ . '/image-content' );
 }
 // Here we call our tt3child_register_acf_block() function on init.
 add_action( 'init', 'tt3child_register_acf_blocks' );

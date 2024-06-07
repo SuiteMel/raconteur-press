@@ -13,3 +13,7 @@
     line-height: theme('lineHeight.tight');
   }
 }
+
+.image-content {
+  background-image: url('./img/paperbg.jpg');
+}

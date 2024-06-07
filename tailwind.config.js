@@ -22,8 +22,8 @@ export default {
       //xl: 24px/32px
       '2xl': '2.5rem', // 40px **
       // 48px
-      '3xl': '4rem' // 64px
-      // 96px
+      '3xl': '4rem', // 64px
+      '4xl': '6rem' // 96px
     },
     container: {
       center: true,
