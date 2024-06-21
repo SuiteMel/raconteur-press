@@ -1,6 +1,7 @@
 <?php
 $data = array(
-
+  'heading' => get_field('featured_slider_heading'),
+  'slides' => get_field('featured_slider_slides')
 );
 
 

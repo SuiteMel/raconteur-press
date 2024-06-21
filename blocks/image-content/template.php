@@ -15,7 +15,9 @@
       <div class="w-10/12 px-8 mx-auto">
         <div class="grid items-center grid-cols-10 gap-8">
           <div class="col-span-4">
-            <?php echo wp_get_attachment_image( $image, 'full', false, ['class' => ''] ); ?>
+            <?php if ( $image ) : ?>
+              <?php echo wp_get_attachment_image( $image, 'full', false, ['class' => ''] ); ?>
+            <?php endif; ?>
           </div>
 
           <div class="col-span-6">

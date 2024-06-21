@@ -1,6 +1,8 @@
 <?php
 $data = array(
-
+	'content' => get_field('banner_content'),
+	'images' => get_field('banner_images'),
+	'background' => get_field('banner_background')
 );
 
 

@@ -50,3 +50,11 @@
 .image-content {
   background-image: url('./img/paperbg.jpg');
 }
+
+.banner__grid {
+  grid-template-columns: 1fr 1fr;
+
+  @screen md {
+    grid-template-columns: 1fr minmax(4rem, 1fr) 1fr;
+  }
+}
