@@ -9,13 +9,13 @@
   $content = $data['content'];
 ?>
 
-<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> my-16 py-10">
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> py-10">
   <div class="container">
     <div class="-mx-8">
       <div class="w-10/12 px-8 mx-auto">
-        <div class="grid grid-cols-10 gap-8">
+        <div class="grid items-center grid-cols-10 gap-8">
           <div class="col-span-4">
-            <?php echo wp_get_attachment_image( $image, 'medium', false, ['class' => ''] ); ?>
+            <?php echo wp_get_attachment_image( $image, 'full', false, ['class' => ''] ); ?>
           </div>
 
           <div class="col-span-6">

@@ -2,10 +2,12 @@
 // include your assets here
 
 // get styles
+import '@splidejs/splide/css/core';
 import "./assets/css/styles.css"
 
 // get scripts
 import './assets/js/scripts.js'
+import Splide from '@splidejs/splide';
 
 /*
 document.querySelector('#app').innerHTML = `
@@ -16,3 +18,8 @@ document.querySelector('#app').innerHTML = `
 
 console.log( 'hello world' );
 console.log( 'another log' );
+
+
+
+
+// new Splide( '.splide' ).mount();

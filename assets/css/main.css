@@ -14,6 +14,39 @@
   }
 }
 
+.footer__logo {
+  .custom-logo-link {
+    display: block;
+  }
+
+  .custom-logo {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header {
+  height: 4.5rem;
+}
+
+.header__logo {
+  height: 100%;
+
+  .wp-block-site-logo {
+    height: 100%;
+  }
+
+  .custom-logo-link {
+    display: block;
+    height: 100%;
+  }
+
+  .custom-logo {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .image-content {
   background-image: url('./img/paperbg.jpg');
 }
