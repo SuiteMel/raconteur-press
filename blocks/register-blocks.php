@@ -17,6 +17,7 @@ function register_acf_blocks() {
   register_block_type( __DIR__ . '/author-grid' );
   register_block_type( __DIR__ . '/image-content' );
   register_block_type( __DIR__ . '/socials' );
+  register_block_type( __DIR__ . '/featured-slider' );
 }
 // Here we call our register_acf_block() function on init.
 add_action( 'init', 'register_acf_blocks' );

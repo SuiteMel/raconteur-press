@@ -1,0 +1,17 @@
+{
+  "name": "banner",
+  "title": "Banner",
+  "description": "Banner to feature text and images",
+  "category": "theme",
+  "apiVersion": 2,
+  "keywords": [
+    "banner"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "blocks/banner/block.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

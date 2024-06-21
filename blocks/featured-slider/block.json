@@ -1,0 +1,17 @@
+{
+  "name": "featured-slider",
+  "title": "Featured Slider",
+  "description": "Slider feature an image and content",
+  "category": "theme",
+  "apiVersion": 2,
+  "keywords": [
+    "slider"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "blocks/featured-slider/block.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
