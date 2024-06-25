@@ -1,6 +1,7 @@
 <?php
 $data = array(
-
+	'heading' => get_field('socials_heading'),
+	'content' => get_field('socials_content')
 );
 
 

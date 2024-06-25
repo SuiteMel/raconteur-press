@@ -1,3 +1,12 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 body {
   background-color: theme('colors.brand.white');
   color: theme('colors.brand.black');
@@ -35,4 +44,40 @@ body {
   font-family: theme('fontFamily.serif');
   display: inline-block;
   line-height: theme('lineHeight.tight');
+}
+
+.social-title {
+  font-family: theme('fontFamily.serif');
+  font-size: theme('fontSize.lg');
+  text-align: center;
+  margin-bottom: theme('space.2');
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: theme('space.4');
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: theme('space.4');
+  padding-right: theme('space.4');
+  padding-top: theme('space.2');
+  padding-bottom: theme('space.2');
+  border-top: solid 2px theme('colors.brand.black');
+  border-bottom: solid 2px theme('colors.brand.black');
+}
+
+.social-link {
+  display: inline-block;
+  transition: 0.25s;
+
+  &:hover {
+    color: theme('colors.brand.orange');
+  }
+}
+
+.social-icon {
+  height: theme('space.6');
+  width: theme('space.6');
 }
