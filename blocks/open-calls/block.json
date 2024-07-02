@@ -1,0 +1,19 @@
+{
+  "name": "open-calls",
+  "title": "Open Calls",
+  "description": "Displays a list of open calls",
+  "category": "theme",
+  "apiVersion": 2,
+  "keywords": [
+    "open calls",
+    "list",
+    "archive"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "blocks/open-calls/block.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

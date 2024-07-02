@@ -2,29 +2,29 @@
 /**
  * Register the custom post type
  */
-if ( ! function_exists('register_author_custom_post_type') ) {
+if ( ! function_exists('register_book_custom_post_type') ) {
 
   // Register Custom Post Type
-  function register_author_custom_post_type() {
+  function register_book_custom_post_type() {
 
     $labels = array(
-      'name'                => 'Authors',
-      'singular_name'       => 'Author',
-      'menu_name'           => 'Authors',
-      'parent_item_colon'   => 'Parent Author',
-      'all_items'           => 'All Authors',
-      'view_item'           => 'View Author',
-      'add_new_item'        => 'Add New Author',
-      'add_new'             => 'New Author',
-      'edit_item'           => 'Edit Author',
-      'update_item'         => 'Update Author',
-      'search_items'        => 'Search Author',
-      'not_found'           => 'No author found',
-      'not_found_in_trash'  => 'No author found in Trash',
+      'name'                => 'Books',
+      'singular_name'       => 'Book',
+      'menu_name'           => 'Books',
+      'parent_item_colon'   => 'Parent Book',
+      'all_items'           => 'All Books',
+      'view_item'           => 'View Book',
+      'add_new_item'        => 'Add New Book',
+      'add_new'             => 'New Book',
+      'edit_item'           => 'Edit Book',
+      'update_item'         => 'Update Book',
+      'search_items'        => 'Search Book',
+      'not_found'           => 'No book found',
+      'not_found_in_trash'  => 'No book found in Trash',
     );
     $args = array(
       'label'               => 'team',
-      'description'         => 'Author description',
+      'description'         => 'Book description',
       'labels'              => $labels,
       'supports'            => array( 'title', 'page-attributes', 'thumbnail' ),
       // 'taxonomies'          => array( 'category', 'post_tag' ),
@@ -42,11 +42,11 @@ if ( ! function_exists('register_author_custom_post_type') ) {
       'publicly_queryable'  => true,
       'capability_type'     => 'post',
     );
-    register_post_type( 'author', $args );
+    register_post_type( 'book', $args );
 
   }
 
   // Hook into the 'init' action
-  add_action( 'init', 'register_author_custom_post_type', 0 );
+  add_action( 'init', 'register_book_custom_post_type', 0 );
 
 }

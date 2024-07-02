@@ -21,7 +21,7 @@
 
   <div class="container mt-10">
     <div class="-mx-8">
-      <div class="w-full px-8 mx-auto sm:1w-0/12 md:w-8/12 lg:w-6/12">
+      <div class="w-full px-8 mx-auto sm:w-10/12 md:w-8/12 lg:w-6/12">
         <?php if ( $content ) : ?>
           <div class="mb-8 text-center wysiwyg">
             <?php echo $content; ?>

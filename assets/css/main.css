@@ -11,6 +11,11 @@
   .wp-block-navigation-item__content {
     font-family: theme('fontFamily.serif');
     line-height: theme('lineHeight.tight');
+
+    &:hover {
+      text-decoration: underline;
+      color: theme('colors.brand.dark-orange');
+    }
   }
 }
 
@@ -27,6 +32,16 @@
 
 .header {
   height: 4.5rem;
+
+  .wp-block-navigation-item__content {
+    transition: .25s;
+    
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: theme('space.2');
+      text-decoration-thickness: 4px;
+    }
+  }
 }
 
 .header__logo {

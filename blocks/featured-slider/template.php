@@ -35,9 +35,11 @@
                 </div>
 
                 <div class="w-2/3 px-4">
-                  <?php if ( $content ) : ?>
-                    <?php echo $content; ?>
-                  <?php endif; ?>
+                  <div class="wysiwyg">
+                    <?php if ( $content ) : ?>
+                      <?php echo $content; ?>
+                    <?php endif; ?>
+                  </div>
                 </div>
               </div>
             </li>

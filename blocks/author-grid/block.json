@@ -6,7 +6,9 @@
   "apiVersion": 2,
   "keywords": [
     "author",
-    "grid"
+    "grid",
+    "list",
+    "archive"
   ],
   "acf": {
     "mode": "preview",
