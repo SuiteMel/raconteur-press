@@ -11,7 +11,7 @@
     'post_type' => 'open_call',
     'posts_per_page' => 12,
     'orderby' => 'open_call_dates_opens',
-    'order' => 'DESC',
+    'order' => 'ASC',
     'fields' => 'ids'
   ];
   $open_calls = get_posts($args);
@@ -45,6 +45,7 @@
                 $title = get_the_title( $open_call);
                 $description = $fields['open_call_description'];
                 $dates = $fields['open_call_dates'];
+                $link = '#';
               ?>
               <article>
                 <div class="grid grid-cols-10 gap-x-8 gap-y-5">
@@ -63,6 +64,12 @@
                     <?php foreach ( $dates as $type => $date ) : ?>
                       <p class=""><span class="font-semibold capitalize"><?php echo $type ?>:</span> <?php echo $date ?: 'TBD'; ?></p>
                     <?php endforeach; ?>
+
+                    <?php if ( $link ) : ?>
+                      <a class="px-3 pt-3 pb-2 mt-8 text-base leading-none rounded btn-text bg-brand-orange" href="<?php echo $link ?>">
+                        Apply Now
+                      </a>
+                    <?php endif; ?>
                   </div>
                 </div>
               </article>

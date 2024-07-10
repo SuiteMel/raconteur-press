@@ -1,4 +1,17 @@
 <?php
+/**
+ * Emulates var_dump into the log file.
+ * Useful for var_dumping AJAX calls
+ */
+function var_error_log( $object=null ){
+  ob_start();
+  $object = json_encode($object);
+  echo $object;
+  $contents = ob_get_contents();
+  ob_end_clean();
+  error_log( $contents );
+}
+
 // Allow SVG
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
 
@@ -46,3 +59,162 @@ function get_socials() {
 }
 
 add_shortcode("my_socials", "get_socials");
+
+add_action('admin_init', function() {
+  add_filter( 'mce_buttons_2', 'myplugin_tinymce_buttons' );
+
+  function myplugin_tinymce_buttons( $buttons ) {
+        //Add style selector to the beginning of the toolbar
+        array_unshift( $buttons, 'styleselect' );
+
+        return $buttons;
+  }
+
+  add_filter('tiny_mce_before_init', function( $data ) {
+    $data['style_formats'] = json_encode([
+      [
+        'title' => 'Text Sizes',
+        'items' => [
+          [
+            'title' => 'Small Text: 14px',
+            'classes' => 'text-sm',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Normal Text: 16px',
+            'classes' => 'text-base',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Large Text: 20px',
+            'classes' => 'text-lg',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Extra Large Text: 32px',
+            'classes' => 'text-xl',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => '2XL Text: 40px',
+            'classes' => 'text-2xl',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => '3XL Text: 64px',
+            'classes' => 'text-3xl',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => '4XL Text: 96px',
+            'classes' => 'text-4xl',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+        ]
+      ],
+      [
+        'title' => 'Font Family',
+        'items' => [
+          [
+            'title' => 'Fox Veteran',
+            'classes' => 'font-serif',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Inter',
+            'classes' => 'font-sans',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ]
+        ]
+      ],
+      [
+        'title' => 'Font Weight',
+        'items' => [
+          [
+            'title' => 'Font Normal: 400',
+            'classes' => 'font-normal',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Font Medium: 500',
+            'classes' => 'font-medium',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Font SemiBold: 600',
+            'classes' => 'font-semibold',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Font Bold: 700',
+            'classes' => 'font-bold',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Font Extra Bold: 800',
+            'classes' => 'font-extrabold',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Font Black: 900',
+            'classes' => 'font-black',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+        ]
+      ],
+      [
+        'title' => 'Text Color',
+        'items' => [
+          [
+            'title' => 'Orange',
+            'classes' => 'text-brand-orange',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Dark Orange',
+            'classes' => 'text-brand-dark-orange',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Light Gray',
+            'classes' => 'text-brand-light-gray',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Brand White',
+            'classes' => 'text-brand-white',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ],
+          [
+            'title' => 'Brand Black',
+            'classes' => 'text-brand-black',
+            'selector' => 'p, a, span, li, h1, h2, h3, h4, h5, h6',
+            'wrapper'  => false
+          ]
+        ]
+      ]
+    ]);
+
+    return $data;
+  });
+
+});

@@ -5,9 +5,12 @@ export default {
     './inc/**/*.php',
     './blocks/**/*.php',
     './parts/**/*.html',
-    // "./assets/main.css",
+    "./assets/*",
     // "./main.js",
     // "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  safelist: [
+    'text-xl'
   ],
   theme: {
     fontFamily: {
@@ -19,9 +22,8 @@ export default {
       sm: '0.875rem', // 14px
       base: '1rem',
       lg: '1.25rem', // 20px
-      //xl: 24px/32px
-      '2xl': '2.5rem', // 40px **
-      // 48px
+      xl: '2rem', // 24px/32px
+      '2xl': '2.5rem', // 40px
       '3xl': '4rem', // 64px
       '4xl': '6rem' // 96px
     },

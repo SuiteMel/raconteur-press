@@ -1,6 +1,6 @@
 export default {
   plugins: {
-    'postcss-urlrebase': { rootUrl: "http://raconteur-press.local/wp-content/themes/raconteur-press/public/assets/"},
+    'postcss-urlrebase': { rootUrl: "https://raconteur-press.local/wp-content/themes/raconteur-press/public/assets/"},
     'tailwindcss/nesting': {},
     tailwindcss: {},
     autoprefixer: {},

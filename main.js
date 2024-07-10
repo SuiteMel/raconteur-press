@@ -14,4 +14,6 @@ import Splide from '@splidejs/splide';
 console.log( 'hello world' );
 console.log( 'another log' );
 
-new Splide( '.splide' ).mount();
+if ( document.querySelector('.splide') ) {
+  new Splide( '.splide' ).mount();
+}

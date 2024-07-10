@@ -28,7 +28,7 @@
           </div>
         <?php endif; ?>
 
-        <iframe src="https://raconteurpress.substack.com/embed" class="w-full mt-4 mb-8 border rounded border-brand-orange" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://raconteurpress.substack.com/embed" class="w-full mt-4 mb-8 border rounded border-brand-orange"></iframe>
 
         <?php echo get_socials(); ?>
       </div>

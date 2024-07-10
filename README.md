@@ -3,6 +3,7 @@
 Start site for development with `npm run dev`, ensure functions.php 'IS_VITE_DEVELOPMENT' is true.
 To view production site `npm run build` and update functions.php 'IS_VITE_DEVELOPMENT' to false.
 
+For Local by Flywheel
 Run log output in terminal (no previous lines) `tail -f -n 0 error.log`
 Stop apache server if port conflict `sudo service apache2 stop`
 More resources

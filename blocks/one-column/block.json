@@ -1,0 +1,17 @@
+{
+  "name": "one-column",
+  "title": "One Column",
+  "description": "Display one column of content",
+  "category": "theme",
+  "apiVersion": 2,
+  "keywords": [
+      "image"
+  ],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "blocks/one-column/block.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

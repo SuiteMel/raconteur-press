@@ -1,4 +1,11 @@
+Major
+- Contact page - high priority
+- wysiwyg styles
+
+Minor
 - Add hygen templates for blocks
-- Research block creation and what various settings mean
-- CPT management
-- Header and footer files
+- cpt singles and archive templates
+
+Deployment
+- Check responsiveness of all pages
+- Create users for site editors

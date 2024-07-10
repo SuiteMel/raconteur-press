@@ -1,17 +1,3 @@
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
-body {
-  background-color: theme('colors.brand.white');
-  color: theme('colors.brand.black');
-}
-
 @font-face {
   font-family: 'Fox Veteran';
   src: url('./fonts/FoxVeteranRegular.woff2') format('woff2');
@@ -28,7 +14,22 @@ body {
   font-display: swap;
 }
 
-.wysiwyg {
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+body {
+  background-color: theme('colors.brand.white');
+  color: theme('colors.brand.black');
+  font-family: theme('fontFamily.sans');
+}
+
+.wysiwyg, #tinymce {
   a:not([class*="btn"]) {
     color: theme('colors.brand.dark-orange');
     text-decoration: underline;
@@ -36,6 +37,14 @@ body {
     &:hover {
       text-decoration-color: transparent;
     }
+  }
+
+  > *:not(:first-child) {
+    margin-top: theme('space.4');
+  }
+
+  :where( .font-serif ) {
+    line-height: theme('lineHeight.tight');
   }
 }
 
