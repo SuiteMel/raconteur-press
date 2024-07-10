@@ -12,15 +12,15 @@
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> py-10">
   <div class="container">
     <div class="-mx-8">
-      <div class="w-10/12 px-8 mx-auto">
-        <div class="grid items-center grid-cols-10 gap-8">
-          <div class="col-span-4">
+      <div class="px-8 mx-auto md:w-10/12">
+        <div class="grid items-center grid-cols-1 gap-8 md:grid-cols-10">
+          <div class="md:col-span-4">
             <?php if ( $image ) : ?>
               <?php echo wp_get_attachment_image( $image, 'full', false, ['class' => ''] ); ?>
             <?php endif; ?>
           </div>
 
-          <div class="col-span-6">
+          <div class="md:col-span-6">
             <?php if ( $heading['text'] || $content ) : ?>
             <div class="text-center wysiwyg">
               <?php if ( $heading['text'] ) : ?>

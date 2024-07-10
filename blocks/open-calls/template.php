@@ -30,7 +30,7 @@
 
   <div class="container mt-10">
     <div class="-mx-8">
-      <div class="w-full px-8 mx-auto sm:w-10/12">
+      <div class="w-full px-8 mx-auto lg:w-10/12">
         <?php if ( $intro ) : ?>
           <div class="mb-10 text-center wysiwyg">
             <?php echo $intro; ?>
@@ -45,14 +45,14 @@
                 $title = get_the_title( $open_call);
                 $description = $fields['open_call_description'];
                 $dates = $fields['open_call_dates'];
-                $link = '#';
+                $link = $fields['open_call_link'] ?: ('mailto:racopresssubmissions@gmail.com?subject=Submission%3A%20' . urlencode($title));
               ?>
               <article>
-                <div class="grid grid-cols-10 gap-x-8 gap-y-5">
-                  <div class="col-span-7">
+                <div class="grid grid-cols-1 md:grid-cols-10 gap-x-8 gap-y-5">
+                  <div class="md:col-span-7">
                     <h2 class="font-serif text-2xl leading-tight"><?php echo $title ?></h2>
                   </div>
-                  <div class="col-span-7">
+                  <div class="md:col-span-7">
                     <?php if ( $description ) : ?>
                       <div class="wysiwyg">
                         <?php echo $description; ?>
@@ -60,7 +60,7 @@
                     <?php endif; ?>
                   </div>
     
-                  <div class="col-span-3">
+                  <div class="md:col-span-3">
                     <?php foreach ( $dates as $type => $date ) : ?>
                       <p class=""><span class="font-semibold capitalize"><?php echo $type ?>:</span> <?php echo $date ?: 'TBD'; ?></p>
                     <?php endforeach; ?>
