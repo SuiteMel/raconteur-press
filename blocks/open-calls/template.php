@@ -9,8 +9,9 @@
 
   $args = [
     'post_type' => 'open_call',
-    'posts_per_page' => 12,
-    'orderby' => 'open_call_dates_opens',
+    'posts_per_page' => -1,
+    'orderby' => 'meta_value',
+    'meta_key' => 'open_call_dates_opens',
     'order' => 'ASC',
     'fields' => 'ids'
   ];

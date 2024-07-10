@@ -1,6 +1,5 @@
 Major
 - Contact page - high priority
-- wysiwyg styles
 
 Minor
 - Add hygen templates for blocks
