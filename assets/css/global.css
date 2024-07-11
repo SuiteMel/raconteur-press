@@ -46,6 +46,35 @@ body {
   :where( .font-serif ) {
     line-height: theme('lineHeight.tight');
   }
+
+  ul,
+  ol {
+    padding-left: theme('padding.5');
+
+    li {
+      &:not(:last-child) {
+        &:not([class*="mb-"]) {
+          margin-bottom: theme('margin.4');
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+    /*
+   * Set default list styles back to disk
+   * and number
+   */
+  ul {
+    list-style-type: theme('listStyleType.disc');
+  }
+
+  ol {
+    list-style-type: theme('listStyleType.decimal');
+  }
 }
 
 .btn-text {

@@ -38,7 +38,8 @@ export default {
           'orange': '#F37A1F',
           'dark-orange': '#A25218',
           'light-gray': '#E7E7E7',
-          'white': '#F1F1F1'
+          'white': '#F1F1F1',
+          'tan': '#F6F3E9'
         },
       },
     },

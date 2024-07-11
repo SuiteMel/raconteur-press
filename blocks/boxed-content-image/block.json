@@ -1,0 +1,19 @@
+{
+  "name": "boxed-content-image",
+  "title": "Boxed Content/Image",
+  "description": "Display content and an image with a dividing line in a box",
+  "category": "theme",
+  "apiVersion": 2,
+  "keywords": [
+    "box",
+    "content",
+    "image"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "blocks/boxed-content-image/block.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
