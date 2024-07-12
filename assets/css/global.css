@@ -84,6 +84,19 @@ body {
   line-height: theme('lineHeight.tight');
 }
 
+.btn-primary {
+  padding-left: theme('space.3');
+  padding-right: theme('space.3');
+  padding-top: theme('space.3');
+  padding-bottom: theme('space.2');
+  line-height: theme('lineHeight.none');
+  border-radius: theme('borderRadius.DEFAULT');
+  background-color: theme('colors.brand.orange');
+  font-family: theme('fontFamily.serif');
+  display: inline-block;
+  font-size: theme('fontSize.base');
+}
+
 .social-title {
   font-family: theme('fontFamily.serif');
   font-size: theme('fontSize.lg');

@@ -78,3 +78,24 @@
     grid-template-columns: 1fr minmax(4rem, 1fr) 1fr;
   }
 }
+
+.gform_wrapper.gravity-theme {
+
+  input[type="email"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  input[type="file"],
+  input[type="url"],
+  select,
+  textarea {
+    border: solid theme('borderWidth.2') theme('colors.brand.dark-orange');
+    padding-top: theme('padding.2');
+    padding-bottom: theme('padding.2');
+    padding-left: theme('padding.4');
+    padding-right: theme('padding.4');
+    border-radius: theme('borderRadius.DEFAULT');
+    background-color: white;
+  }
+}

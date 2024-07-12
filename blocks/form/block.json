@@ -1,0 +1,17 @@
+{
+  "name": "form",
+  "title": "Form",
+  "description": "Display a gravity form in a container",
+  "category": "theme",
+  "apiVersion": 2,
+  "keywords": [
+      "form"
+  ],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "blocks/form/block.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}
