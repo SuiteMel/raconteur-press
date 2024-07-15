@@ -12,8 +12,8 @@ add_action( 'wp_body_open', function() {
 
 // Main switch to get frontend assets from a Vite dev server OR from production built folder
 // it is recommended to move it into wp-config.php
-define('IS_VITE_DEVELOPMENT', true);
-// define('IS_VITE_DEVELOPMENT', false);
+// define('IS_VITE_DEVELOPMENT', true);
+define('IS_VITE_DEVELOPMENT', false);
 
 
 include "inc/inc.vite.php";
