@@ -26,14 +26,14 @@
 			<div class="md:order-first">
 				<div class="aspect-[3/4]">
 					<?php if ( $images && $images[1] ) : ?>
-						<?php echo wp_get_attachment_image( $images[0], 'full', false, ['class' => 'object-cover w-full h-full'] ); ?>
+						<?php echo wp_get_attachment_image( $images[0], 'full', false, ['class' => 'object-contain w-full h-full'] ); ?>
 					<?php endif; ?>
 				</div>
 			</div>
 			<div class="">
 				<div class="aspect-[3/4]">
 					<?php if ( $images && $images[1] ) : ?>
-						<?php echo wp_get_attachment_image( $images[1], 'full', false, ['class' => 'object-cover w-full h-full'] ); ?>
+						<?php echo wp_get_attachment_image( $images[1], 'full', false, ['class' => 'object-contain w-full h-full'] ); ?>
 					<?php endif; ?>
 				</div>
 			</div>
