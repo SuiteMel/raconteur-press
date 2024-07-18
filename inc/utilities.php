@@ -211,6 +211,23 @@ add_action('admin_init', function() {
             'wrapper'  => false
           ]
         ]
+      ],
+      [
+        'title' => 'Buttons',
+        'items' => [
+          [
+            'title' => 'Orange Button',
+            'classes' => 'btn-light',
+            'selector' => 'a',
+            'wrapper' => false
+          ],
+          [
+            'title' => 'Dark Orange Button',
+            'classes' => 'btn-dark',
+            'selector' => 'a',
+            'wrapper' => false
+          ],
+        ]
       ]
     ]);
 
