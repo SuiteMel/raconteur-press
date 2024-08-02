@@ -4,7 +4,7 @@ export default {
     "./templates/index.html",
     './inc/**/*.php',
     './blocks/**/*.php',
-    './parts/**/*.html',
+    './parts/**/*.php',
     "./assets/*",
     // "./main.js",
     // "./src/**/*.{js,ts,jsx,tsx}",
